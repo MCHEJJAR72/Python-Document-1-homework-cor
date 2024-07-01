@@ -1,0 +1,1094 @@
+
+Tasks Today:
+Int & Float assignments
+     a) Assigning int
+     b) Assigning float
+     c) Performing Calculations on ints and floats
+         - Addition
+         - Subtraction
+         - Multiplication
+         - Division
+         - Floor Division
+         - Modulo
+         - Exponential
+String Input-Output
+     a) String Assignment
+     b) print()
+     c) String Concatenation
+     d) Type Conversion
+     e) input()
+     f) format()
+     g) Old Way (python 2)
+In-Class Exercise #1
+If Statements
+     a) 'is' keyword
+     b) 'in' keyword
+     c) 'not in' keyword
+In-Class Exercise #2
+Elif Statements
+Else Statements
+In-Class Exercise #3
+For Loops
+     a) Using 'in' keyword
+     b) Continue Statement
+     c) Break Statement
+     d) Pass Statement
+     e) Double For Loops
+While Loops
+     a) Looping 'While True'
+     b) While and For Loops Used Together
+Built-In Functions
+     a) range()
+     b) len()
+     c) help()
+     d) isinstance()
+     e) abs()
+Try and Except
+Lists
+     a) Declaring Lists
+     b) Indexing a List
+     c) .append()
+     d) .insert()
+     e) .pop()
+     f) .remove()
+     g) del()
+     h) Concatenating Two Lists
+     i) Lists Within Lists
+     j) Looping Through Lists
+Int & Float Assignments
+Assigning int
+number = 6
+print(number)
+6
+Assinging float
+numberFloat = 2.3
+print(numberFloat)
+numberFloat = 7.2
+print(numberFloat)
+2.3
+7.2
+Performing Calculations on ints and floats
+Addition
+num1 = 2
+num2 = 5.4
+
+num3 = num1 + num2
+
+print(num3)
+
+num3 += 2 # Adds 2 to num3 result
+
+print(num3)
+7.4
+9.4
+Subtraction
+num1 = 2
+num2 = 5.4
+
+result_diff = num2 - num1
+print(result_diff)
+
+result_diff -= 1
+print(result_diff)
+3.4000000000000004
+2.4000000000000004
+Multiplication
+result_mull = num1 * num2
+print(result_mull)
+
+result_mull *= 2
+print(result_mull)
+10.8
+21.6
+Division
+result_div = num2 / num1
+print(result_div)
+
+result_div /= 3
+print(result_div)
+2.7
+0.9
+Floor Division
+result_floor = num2 // num1
+print(result_floor)
+
+result_floor //= 2
+print(result_floor)
+2.0
+1.0
+Modulo
+result_mod = num2 % num1
+print(result_mod)
+
+result_mod2 = 13 % 2
+print(result_mod2)
+
+result_mod2 %= 2
+print(result_mod2)
+1.4000000000000004
+1
+1
+Exponential
+square = 5 ** 2
+print(square)
+
+square **= 2
+print(square)
+25
+625
+String Input-Output
+String Assignment
+name = "Ivan"
+print(name)
+Ivan
+print()
+Don't forget about end=' '
+
+print("This is my first name : ", name)
+
+print("Full name:", name, end=" Angulo")
+This is my first name :  Ivan
+Full name: Ivan Angulo
+String Concatenation
+first_name = "Ivan"
+last_name = "Angulo"
+
+full_name = first_name + last_name
+print(full_name)
+
+full_name2 = first_name + " " + last_name
+print(full_name2) 
+
+full_name2 += ", Jr"
+print(full_name2)
+IvanAngulo
+Ivan Angulo
+Ivan Angulo, Jr
+Type Conversion
+number = "32"
+
+change_type_num = int(number)
+
+print(number)
+print(change_type_num)
+
+print(change_type_num + 1)
+32
+32
+33
+input()
+# input will always return a string
+
+name = input("What is your name?")
+print("Nice to meet you", name)
+print("Nice to meet you" + name)
+
+age = input("What is your age? :")
+add_age = int(age) + 5
+print(add_age)
+
+age = int(input("What is your age? :"))
+add_age = age + 5
+print(add_age)
+What is your name?Ivan
+Nice to meet you Ivan
+Nice to meet youIvan
+What is your age? :78
+83
+What is your age? :78
+83
+format()
+age = input("What is your age ? ")
+
+# Different ways to format printing
+
+result_string = "You are {} {} and you are getting wiser". format(age, name)
+print(result_string)
+
+result_again = f"{age} is a great time in life!!"
+print(result_again)
+What is your age ? 22
+You are 22 Ivan and you are getting wiser
+22 is a great time in life!!
+Old Way (python 2)
+result_string2 = "YOu are %s and you look great for you age!" %age
+print(result_string2)
+YOu are 22 and you look great for you age!
+In-Class Exercise 1
+Create a format statement that asks for color, year, make, model and prints out the results
+
+color = input("What your color of choice ? ")
+year = input("What year woudl you like your car to be ?")
+make = input("What make is your favorite ?")
+model = input("And finally, what model is the one you like the most ?")
+
+result = f"Your dream car is a {color}, {year}, {make} {model} . Thats a great choice!"
+print(result)
+# 2 differnet ways to print a result
+
+result = "Your dream car is a {}, {}, {} {}". format(color, year, make, model) 
+print(result)
+What your color of choice ? Black
+What year woudl you like your car to be ?2022
+What make is your favorite ?LAxus
+And finally, what model is the one you like the most ?RX350
+Your dream car is a Black, 2022, LAxus RX350 . Thats a great choice!
+Your dream car is a Black, 2022, LAxus RX350
+If Statements
+# Available operators: Greater(>), Less(<),Equal(==)
+# Greater or Equal(>=), Less or Equal (<=)
+
+# Truth Tree:
+# T && F = F
+# T && T = T
+# T || F = T
+# F || T = T
+# F || F = F
+
+num1 = 5
+
+if num1 == 6:
+    print('This is true')
+else:
+    print('That thing was not true. It is False')
+    
+    
+num1 = 24
+num2 = 12
+
+if num1 == num2:
+    print('Both numbers ar equal')
+else:
+    print('Not equal')
+    
+
+if num2 > num1:
+    print('Num2 is greater')
+elif num2 < num1:
+    print('Num1 is greater')
+else:
+    print('Equal values')
+    
+That thing was not true. It is False
+Not equal
+Num1 is greater
+'is' keyword
+ 
+'in' keyword
+# Check if a character is in a string
+
+char_name = 'Frodo Baggina'
+
+if 'Frodo' in char_name:
+    print('The word is in the string')
+else:
+    print('The word is not in the string')
+The word is not in the string
+'not in' keyword'
+sega_char = 'Sonica'
+
+if 'a' not in sega_char:
+    print('letter "a" in not in the string')
+else:
+    print('We found it!')
+    
+sega_char = 'Sonic'
+
+if 'a' not in sega_char:
+    print('letter "a" in not in the string')
+else:
+    print('We found it!')
+We found it!
+letter "a" in not in the string
+In-Class Exercise 2
+Ask user for input, check to see if the letter 'p' is in the input
+
+# Output : True -- if 'p' is found
+# False -- if 'p' is not found
+
+user_input = input('Please enter any word. We are going to check if the letter "P" is in it > ')
+
+if 'p' in user_input:
+    print('We found it!')
+else:
+    print('Try another word')
+
+                   
+Please enter any word. We are going to check if the letter "P" is in it > n
+Try another word
+Using 'and'/'or' with If Statements
+num_11 = 15
+num_12 = 3
+num_13 = 33
+num_14 = 42
+
+# if with an 'and' statment
+if num_11 / 5 == num_12 and num_13 + 9 == num_14:
+    print('Both statements are "True" and "True"')
+    
+# if statement and an 'or' statement
+if num_13 == num_14 or num_11 > num_12:
+    print('False and True equals "True" on a F "OR" T')
+    
+Both statements are "True" and "True"
+False and True equals "True" on a F "OR" T
+Elif Statements
+first_name = input('What is your name ? ')
+
+if first_name == 'Smith':
+    print('The name is Smith.')
+elif first_name == 'Brandon':
+    print('The name is Brandon')
+elif first_name != 'Max':
+    print('The name is not Max.')
+else:
+    print('The name is Max.')
+
+### Else Statements
+What is your name ? Max
+The name is Max.
+# see above
+For Loops
+# Syntax
+# for counter in condition
+
+name = 'Ivan Angulo'
+print(name)
+
+for letter in name:
+    print(letter)
+    
+name2 = [5, 6, 7, 8]
+print(name2)
+
+for letter in name2:
+    print(letter)
+    print(letter + 1)
+    
+# You can add numbers to 'strings'
+
+a_list = [1, 2, 3, 4, 5]
+
+for i in a_list:
+    print(i)
+Ivan Angulo
+I
+v
+a
+n
+ 
+A
+n
+g
+u
+l
+o
+[5, 6, 7, 8]
+5
+6
+6
+7
+7
+8
+8
+9
+1
+2
+3
+4
+5
+Using 'in' keyword
+# see above
+Continue Statement
+# will continue to next iteration
+for i in range(20):
+    print(i)
+    
+for i in range(20):
+    if i == 5:
+        continue
+    print(i)
+# Notice below that on the second list, the list skipped the number #5
+#  Another exmple below with a string
+
+name = 'Ivan Angulo'
+
+for i in name:
+    print(i)
+    
+# Now we incorporate the 'continue' statement
+
+for i in name:
+    if i == 'n':
+        continue
+    print(i)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+0
+1
+2
+3
+4
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+I
+v
+a
+n
+ 
+A
+n
+g
+u
+l
+o
+I
+v
+a
+ 
+A
+g
+u
+l
+o
+Break Statement
+# will break out of current loop
+for i in range(10):
+    print(i)
+
+# Now we incorporate the 'break' statement
+
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+Pass Statement
+# mostly used as a placeholder, and will continue on same iteration
+name = 'Ivan Angulo'
+
+for i in name:
+    pass
+    print(i)
+    
+#     the 'pass' statment really just ignores the previous statment and continues to the next statemnt
+I
+v
+a
+n
+ 
+A
+n
+g
+u
+l
+o
+Double For Loops
+for i in range(1):
+    for j in range(5):
+        print('i= ', i, 'j= ', j)
+        
+# In the example above we can see that the inner loop runs over the 5 iterations '(range(5))' for every one time 
+# until the last iteration inthe outer (range()) statement. Down is a larger double 'for' loop
+print('')
+print('')
+print('LArger double loop below divided by a space per each iteration of the outer for loop')
+
+for i in range(5):
+    for j in range(5):
+        print('i= ', i, 'j= ', j)
+    print('')
+i=  0 j=  0
+i=  0 j=  1
+i=  0 j=  2
+i=  0 j=  3
+i=  0 j=  4
+
+
+LArger double loop below divided by a space per each iteration of the outer for loop
+i=  0 j=  0
+i=  0 j=  1
+i=  0 j=  2
+i=  0 j=  3
+i=  0 j=  4
+
+i=  1 j=  0
+i=  1 j=  1
+i=  1 j=  2
+i=  1 j=  3
+i=  1 j=  4
+
+i=  2 j=  0
+i=  2 j=  1
+i=  2 j=  2
+i=  2 j=  3
+i=  2 j=  4
+
+i=  3 j=  0
+i=  3 j=  1
+i=  3 j=  2
+i=  3 j=  3
+i=  3 j=  4
+
+i=  4 j=  0
+i=  4 j=  1
+i=  4 j=  2
+i=  4 j=  3
+i=  4 j=  4
+
+While Loops
+# Syntax
+# 'while' keyword, condition statement
+
+num = 0
+
+while num < 10:
+    print(num)
+    num += 1
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Looping 'While True'
+game_over = True  # Flag
+
+while game_over:
+    print('Infinite loop if there is no way to change the value of "game over" to False')
+    user_input = input('Would you like to stop ?')
+    if user_input == 'yes':
+#         you can use 'break' or ...
+        game_over = False
+Infinite loop if there is no way to change the value of "game over" to False
+Would you like to continue ?no
+Infinite loop if there is no way to change the value of "game over" to False
+Would you like to continue ?no
+Infinite loop if there is no way to change the value of "game over" to False
+Would you like to continue ?no
+Infinite loop if there is no way to change the value of "game over" to False
+Would you like to continue ?no
+Infinite loop if there is no way to change the value of "game over" to False
+Would you like to continue ?yes
+While & For Loops Used Together
+num = 0 
+
+while num < 5:
+    print('\nIteration of the "while" loop # :' + str(num))
+    for i in range(2):
+        print('Iteration of the "for-loop" # :',i)
+    num += 1
+Iteration of the "while" loop # :0
+Iteration of the "for-loop" # : 0
+Iteration of the "for-loop" # : 1
+
+Iteration of the "while" loop # :1
+Iteration of the "for-loop" # : 0
+Iteration of the "for-loop" # : 1
+
+Iteration of the "while" loop # :2
+Iteration of the "for-loop" # : 0
+Iteration of the "for-loop" # : 1
+
+Iteration of the "while" loop # :3
+Iteration of the "for-loop" # : 0
+Iteration of the "for-loop" # : 1
+
+Iteration of the "while" loop # :4
+Iteration of the "for-loop" # : 0
+Iteration of the "for-loop" # : 1
+Built-In Functions
+range()
+# range(start, stop, step)
+
+for i in range(20):
+    print(i)
+print('\n')
+# Defaults from 0 and stops before the limit of the range . non-inclusive of '20' in this case
+
+for i in range(2, 20):
+    print(i)
+print('\n')
+
+# prints starting at '2'
+
+for i in range(2, 20, 2): #Doing the count starting at '2' upt ot '20' and stepping by '2' every time
+    print(i)
+print('\n')
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+
+
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+len()
+name = 'Max'
+
+length = len(name)
+print(length) #Very simple example of what the function does. 
+
+print('\n')
+
+name = input('What is the name of your favorite book ?')
+length = len(name)
+
+print(length)
+
+print('\n')
+3
+
+
+What is the name of your favorite book ?Lord of the Rings
+17
+
+
+help()
+# Use this function to view more info about a python function
+
+help(len)
+Help on built-in function len in module builtins:
+
+len(obj, /)
+    Return the number of items in a container.
+
+isinstance()
+# Check a variable to find out what an object family (or data type) it belongs to
+# isinstance(var, type)
+
+   #We are trying to find out if the value '4.5' is an 'int' (Answer is T or F)
+
+if isinstance(4.5, float):
+    print('This number is a FLOAT type')
+
+print('\n')
+
+# Another example with input from user
+
+num = 4
+
+if isinstance(num, int):
+    print(f'{num} is an integer')
+else:
+    print(f'{num} is a float')
+
+print('\n')
+
+num2 = 5.3
+
+if isinstance(num2, int):
+    print(f'{num2} is an intger')
+else:
+    print(f'{num2} is a float!')
+False
+This number is a FLOAT type
+
+
+4 is an integer
+
+
+5.3 is a float!
+abs()
+# As in math, this is used to use the absolute value of any number
+
+# Syntax : 
+# |-5| = 5
+
+print(abs(-5))
+5
+Try and Except
+# Use this to log out graceful and useful error messages
+# Does not stop the program! Neato!
+
+try:
+    number_test = 0
+    input_num = int(input('Guess a number  '))
+    print('your number is : ', str(input_num))
+except:
+    print('That didnt work! Change your input to a number') #Try running it by entering anything but a number
+Guess a number  f
+That didnt work! Change your input to a number
+Lists
+Declaring Lists
+list_1 = []
+
+names = ['Max', 'Cindy', 'Ksthy', 'Bob', 'Nate']
+print(names)
+print(isinstance(names, list))
+['Max', 'Cindy', 'Ksthy', 'Bob', 'Nate']
+True
+Indexing a List
+# list_name[start: stop: step]
+
+# Single Index
+print(names[1])
+
+# Print starting at index 1 going to the end
+print(names[1:])
+
+# Print starting at the beggining of the list up until a specific number
+print(names[:2]) #the 'stop' parameter is non-inclusive
+
+# Print starting at index 1 and going up BY 2 in each iteration
+print(names[1::2])
+
+# Print starting at the back and display in reversed order
+print(names[::-1])
+Cindy
+['Cindy', 'Ksthy', 'Bob', 'Nate']
+['Max', 'Cindy']
+['Cindy', 'Bob']
+['Nate', 'Bob', 'Ksthy', 'Cindy', 'Max']
+.append()
+# Syntax :  
+# list_name.append()
+# this function WILL ALWAYS add the object to the very end of the list
+
+names.append('Ivan')
+print(names)
+['Max', 'Cindy', 'Ksthy', 'Bob', 'Nate', 'Ivan']
+.insert()
+# Syntax
+# list_names.insert(index_place, 'object')
+# This function will allow you to add the object at the specified pplace or 'index' desired in your list
+
+names = ['Max', 'Cindy', 'Ksthy', 'Bob', 'Nate', 'Ivan']
+print(names)
+
+names.insert(3, 'Brandon')  #the object is being inserted at index 3 in our list
+print(names)
+['Max', 'Cindy', 'Ksthy', 'Bob', 'Nate', 'Ivan']
+['Max', 'Cindy', 'Ksthy', 'Brandon', 'Bob', 'Nate', 'Ivan']
+.pop()
+# Defaults to the last value if no parameter was provided
+# POP returns the element that was removed in case you want to assign it to a variable
+
+# Original list
+print(names)
+
+my_name = names.pop(2) #In this case we are going to remove the object in index 2 'Ksthy'
+print(my_name)
+print(names)
+
+# If we keepp running the code , the objects that fall into 'index 2' will keep desapearing 
+['Max', 'Cindy', 'Ksthy', 'Brandon', 'Bob', 'Nate', 'Ivan']
+Ksthy
+['Max', 'Cindy', 'Brandon', 'Bob', 'Nate', 'Ivan']
+.remove()
+# Syntax :
+# list_name.remove('object')
+# Value to be removed rather than the item in a specific index as in pop
+
+names = ['Max', 'Cindy', 'Ksthy', 'Brandon', 'Bob', 'Nate', 'Ivan', 'Brandon', 'Brandon']
+print(names)
+
+names.remove('Bob')
+print(names)
+
+# If we run the code again , we will get an error since the object was already removed
+
+# To REMOVE MULTIPLE objects that are equal possibly in a list
+
+while 'Brandon' in names:
+    names.remove('Brandon')
+
+print(names)
+['Max', 'Cindy', 'Ksthy', 'Brandon', 'Bob', 'Nate', 'Ivan', 'Brandon', 'Brandon']
+['Max', 'Cindy', 'Ksthy', 'Brandon', 'Nate', 'Ivan', 'Brandon', 'Brandon']
+['Max', 'Cindy', 'Ksthy', 'Nate', 'Ivan']
+del()
+# Goes by Index, rather than value
+# Be careful with del, it can cause indexing errors if not used carfully 
+
+print(names)
+del(names[1])
+print(names)
+['Max', 'Cindy', 'Ksthy', 'Nate', 'Ivan']
+['Max', 'Ksthy', 'Nate', 'Ivan']
+Concatenating Two Lists
+# Will append two lists together, but will NOT add the values
+
+list_2 = [0, 1, 2]
+list_3 = [3, 4, 5]
+
+large_list = list_2 + list_3
+
+print(large_list)
+[0, 1, 2, 3, 4, 5]
+Lists Within Lists
+# Lists can hold ANY type of other elements, INCLUDING other lists!
+# They can go as deep as you want; this is called nested lists
+
+names = ['Max', 'sam', 'Josh', ['Sally', 'Sue', 'Tameka']] #the nested list is located and identified as the object
+                                                #in index position '3'
+print(names)
+print(names[3]) #We are printing the 'object' located in position index #3
+
+# Now to print one 'object' , in this casae we are looking for 'Sue', form the secondary nested list located in 
+# position #3 in the index of the original list 'names', we add as a parameter the index location of the nested
+# list inside the parent list (3) , and then in a secondary braket we identify the position of the specific object
+# inside the child list, which would be '1' for 'Sue' . names[3][1]
+
+print(names[3][1])
+
+# If we had an even deeper list nested inside the nested list in the original list names, we just add the third 
+# parameter. In this case we are looking for 'Ivan'
+
+names = ['Max', 'sam', 'Josh', ['Sally', 'Sue', ['john', 'Patrick', 'Ivan']],'Tameka']
+
+print(names[3][2][2])
+
+# You can add as many parameters as necessary and as deep as you need to go
+['Max', 'sam', 'Josh', ['Sally', 'Sue', 'Tameka']]
+['Sally', 'Sue', 'Tameka']
+Sue
+Ivan
+Looping Through Lists
+# Two ways to loop through a list! One is by index; the other is by using the 'in' word
+
+# By index
+
+print(len(names)) #This will print the length of the original list and counting each nested 
+                  # list as an object inside their respective original index. 
+                  # Max = 0, sam = 1, Josh = 2, ['Sally', 'Sue', ['john', 'Patrick', 'Ivan'] = 3, Tameka = 4
+                  # ['Sally', 'Sue', ['john', 'Patrick', 'Ivan'] are all part of position 3 in the index of the
+                  # list 'names'. The result should be '5' elements or objects
+
+for i in range(len(names)):
+    print('Index position in "names" list :', i, 'Object -> ', names[i])
+    
+
+print('\n')
+#     Second way to do it ....
+# Loop with the word or function 'in'
+
+for i in names:
+    print(i)
+    
+print('\n')
+
+
+    
+5
+Index position in "names" list : 0 Object ->  Max
+Index position in "names" list : 1 Object ->  sam
+Index position in "names" list : 2 Object ->  Josh
+Index position in "names" list : 3 Object ->  ['Sally', 'Sue', ['john', 'Patrick', 'Ivan']]
+Index position in "names" list : 4 Object ->  Tameka
+
+
+Max
+sam
+Josh
+['Sally', 'Sue', ['john', 'Patrick', 'Ivan']]
+Tameka
+
+
+Exercise #1
+Cube Number Test... Print out all cubed numbers up to the total value 1000. Meaning that if the cubed number is over 1000 break the loop.
+
+import math
+
+i = 1
+x = 1
+while x < 1000:
+    x = i ** 3
+    print(x)
+    i += 1
+    
+Please enter a number -->4
+4
+16
+256
+Exercise #2
+Get first prime numbers up to 100
+
+# HINT::
+# An else after an if runs if the if didn’t
+# An else after a for runs if the for didn’t break
+
+
+for count in range(1, 101, 1):
+    is_prime = True
+    for i in range(2,count):
+        if (count % i == 0):
+            is_prime = False
+    if is_prime == True:
+       print(count)
+    
+    
+#     /Doesnt work below
+
+# for count in range(1, 101, 1):
+# #     is_prime = True
+#     for i in range(2,count):
+#         if (count % i == 0):
+#             continue
+#         else: #is_prime == True:
+#             print(count)
+1
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+53
+59
+61
+67
+71
+73
+79
+83
+89
+97
+for count in range(1, 101, 1):
+    is_prime = True
+    for i in range(2,count):
+        if (count % i == 0):
+            is_prime = False
+    if is_prime == True:
+       print(count)
+1
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+53
+59
+61
+67
+71
+73
+79
+83
+89
+97
+Exercise 3
+Take in a users input for their age, if they are younger than 18 print kids, if they're 18 to 65 print adults, else print seniors
+
+age = int(input('What is your current age ? '))
+if age < 18:
+    print('kids')
+elif age < 65:
+    print('Adult')
+else:
+    print('Senior')
+
+
+    
+What is your current age ? 88
+Senior
